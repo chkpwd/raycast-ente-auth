@@ -77,7 +77,7 @@ ente version
    - Search for a specific account.
    - You can change the preferred action when `Enter` is pressed (e.g. Paste or Copy).
    - The search supports loose search queries, matching words in the account name in any order.
-      - For example "Docker Hub" will match with the queries "Docker Hub", "Hub", "Do Hu".
+     - For example "Docker Hub" will match with the queries "Docker Hub", "Hub", "Do Hu".
 
 ---
 
