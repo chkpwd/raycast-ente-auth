@@ -1,5 +1,6 @@
 {
 	"$schema": "https://www.raycast.com/schemas/extension.json",
+	"type": "module",
 	"name": "ente-auth",
 	"title": "Ente Auth",
 	"description": "Get TOTP Codes from Ente Auth",
