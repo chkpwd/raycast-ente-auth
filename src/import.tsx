@@ -27,7 +27,11 @@ export default async function Command() {
 	try {
 		createEntePath(DEFAULT_EXPORT_DIR_PATH());
 		exportEnteAuthSecrets();
+	} catch (error) {
+		console.warn("Export failed, proceeding with existing file:", error);
+	}
 
+	try {
 		const secrets = parseSecrets(getSecrets(EXPORT_FILE_PATH));
 		await storeSecrets(secrets);
 
