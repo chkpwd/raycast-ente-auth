@@ -1,4 +1,4 @@
-{
+export default {
   "$schema": "https://json.schemastore.org/tsconfig",
   "include": ["src/**/*", "raycast-env.d.ts"],
   "compilerOptions": {
