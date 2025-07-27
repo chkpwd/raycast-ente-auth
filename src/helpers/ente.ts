@@ -6,25 +6,21 @@ import { DEFAULT_EXPORT_DIR_PATH, EXPORT_FILE_PATH } from "../constants/ente";
 const DEFAULT_CLI_PATH = getPreferenceValues().cliPath || "/usr/local/bin/ente";
 
 export const checkEnteExportDirValue = (): boolean => {
-	try {
-		const accountList = execSync(`${DEFAULT_CLI_PATH} account list`).toString();
-		const exportDirMatch = accountList.match(/^ExportDir:\s*(.*)$/m);
+	const accountList = execSync(`${DEFAULT_CLI_PATH} account list`).toString();
+	const exportDirMatch = accountList.match(/^ExportDir:\s*(.*)$/m);
 
-		if (!exportDirMatch) {
-			throw new Error("ExportDir not found in account list output.");
-		}
-
-		const enteExportDir = exportDirMatch[1].trim();
-		const expectedExportDir = DEFAULT_EXPORT_DIR_PATH().trim();
-
-		if (enteExportDir !== expectedExportDir) {
-			throw new Error(`Export path mismatch.\nExpected: ${expectedExportDir}\nFound:    ${enteExportDir}`);
-		}
-
-		return true;
-	} catch (err) {
-		throw err;
+	if (!exportDirMatch) {
+		throw new Error("ExportDir not found in account list output.");
 	}
+
+	const enteExportDir = exportDirMatch[1].trim();
+	const expectedExportDir = DEFAULT_EXPORT_DIR_PATH().trim();
+
+	if (enteExportDir !== expectedExportDir) {
+		throw new Error(`Export path mismatch.\nExpected: ${expectedExportDir}\nFound:    ${enteExportDir}`);
+	}
+
+	return true;
 };
 
 export const createEntePath = (path: string): string => {
