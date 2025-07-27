@@ -35,7 +35,7 @@ export const parseSecrets = (rawSecretsURLs: string[]): Secret[] => {
 			try {
 				secretsList.push(parseSecretURL(line));
 			} catch (error) {
-				console.error("Error parsing line:", line);
+				console.error("Error parsing line:", line, error);
 			}
 		}
 	});

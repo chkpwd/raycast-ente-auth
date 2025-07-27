@@ -43,9 +43,9 @@ export const checkEnteBinary = (): boolean => {
 		execSync(`${DEFAULT_CLI_PATH} version`);
 		return true;
 	} catch (error) {
-		console.log("Ente binary not found. Please install it.");
-		return false;
+		console.error("Ente binary not found. Please install it.", error);
 	}
+	return false;
 };
 
 export const exportEnteAuthSecrets = (): boolean => {
@@ -59,7 +59,7 @@ export const exportEnteAuthSecrets = (): boolean => {
 	try {
 		execSync(`${DEFAULT_CLI_PATH} export`);
 		console.log("Export to", EXPORT_FILE_PATH);
-	} catch (error) {
+	} catch {
 		throw new Error("Export failed. Please check if the command is correct.");
 	}
 	return true;
