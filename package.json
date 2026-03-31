@@ -105,7 +105,7 @@
 		"otpauth": "^9.4.0",
 		"simple-icons": "^15.4.0",
 		"ts-node": "^10.9.2",
-		"typescript": "^5.8.3",
+		"typescript": "^6.0.0",
 		"url-parse": "^1.5.10"
 	},
 	"devDependencies": {
@@ -120,7 +120,7 @@
 		"jest": "^30.0.4",
 		"prettier": "^3.6.2",
 		"ts-jest": "^29.4.0",
-		"typescript": "^5.8.3",
+		"typescript": "^6.0.0",
 		"typescript-eslint": "^8.35.1"
 	},
 	"scripts": {
