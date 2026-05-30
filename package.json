@@ -99,7 +99,7 @@
 		"@raycast/api": "^1.100.3",
 		"@raycast/utils": "^2.1.0",
 		"axios": "^1.10.0",
-		"commander": "^14.0.0",
+		"commander": "^15.0.0",
 		"figlet": "^1.8.1",
 		"fs-extra": "^11.3.0",
 		"otpauth": "^9.4.0",
